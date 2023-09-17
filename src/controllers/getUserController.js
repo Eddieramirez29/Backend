@@ -20,8 +20,8 @@ export const getUser = async (_, response) => {
 
 
 export const getUserById = async (request, response) => {
-    const { id } = request.params
-    const user = await Task.findById(id).populate("user")
+    const { id } = request.params; //La variable id tiene el mismo nombre que viene en el enrutador
+    const user = await User.findById(id);//Permite extrar la info de un usuario por medio del id asignado en Mongo DB.
     if (!user) 
     {
         response.status(404).send("No existe el registro en la base de datos")
