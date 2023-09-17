@@ -1,14 +1,14 @@
 import { Router } from "express";
-import { getUser, getUserById } from "../controllers/getUserController";
+import { /*getUser, */ getUserByEmail } from "../controllers/getUserController";
 
 
 const getRouter = Router();
 
-getRouter.get("/users", getUser); 
+// getRouter.get("/users", getUser);  para extraer a todos los usuarios.
 
 //Para extraer un usuario en especifico por medio de su id.
 
-getRouter.get("/users/:id", getUserById); 
+getRouter.get("/users/:email", getUserByEmail); 
 
 export default getRouter;
 
