@@ -17,10 +17,7 @@ const userSchema = new Schema({
         type: String,
        required: true
     },
-    // tasks: [{
-    //     type: Schema.Types.ObjectId,
-    //     ref: "tasks" // nombre de coleccion a lo que se hace referencia
-    // }] 
+
 }, { timestamps: true } )
 
 const User = model("users", userSchema)

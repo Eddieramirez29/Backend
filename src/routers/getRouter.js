@@ -6,7 +6,7 @@ const getRouter = Router();
 
 // getRouter.get("/users", getUser);  para extraer a todos los usuarios.
 
-//Para extraer un usuario en especifico por medio de su id.
+//Para extraer un usuario en especifico por medio de su email y ver si está registrado
 
 getRouter.get("/users/:email", getUserByEmail); 
 

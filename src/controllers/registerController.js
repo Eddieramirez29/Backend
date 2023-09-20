@@ -2,6 +2,7 @@
 
 import User from "../models/User"
 
+//Controlador usado para el registro de un usuario.
 export const register = async (request, response) => {
 
     const { name, lastName, email, password } = request.body//Obtener los datos del formulario

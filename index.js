@@ -2,6 +2,7 @@ import express from "express"
 import {} from "dotenv/config"
 import { jsonParser } from "./src/middleware/bodyParser"
 import registerRouter from "./src/routers/registerRouter"
+import registerPostRouter from "./src/routers/registerPostRouter"
 import getRouter from "./src/routers/getRouter"
 import { DBConn } from "./src/config/database"
 const cors = require('cors');
@@ -21,7 +22,8 @@ app.use(cors());
 // Routers
 app.use(
     registerRouter,  
-    getRouter
+    getRouter,
+    registerPostRouter
 )
 
 
